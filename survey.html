@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Survey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>College Survey Form</h1>
+  <form id="surveyForm">
+
+    <!-- Step 1: General Info -->
+    <div class="form-step form-step-active">
+      <h2>General Information</h2>
+      <label>Name (or Anonymous):
+        <input type="text" name="name" placeholder="Enter name or Anonymous" required>
+      </label>
+      <label>Age:
+        <input type="number" name="age" placeholder="Enter age" min="19" required>
+      </label>
+      <label>Gender:
+        <select name="gender" required>
+          <option value="">-- Select Gender --</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+          <option>Prefer not to say</option>
+        </select>
+      </label>
+      <label>Course / Department / Year:
+        <input type="text" name="course" placeholder="e.g. B.Tech / CSE / 2nd Year" required>
+      </label>
+      <button type="button" class="btn-next">Next</button>
+    </div>
+
+    <!-- Step 2: Academic & Teaching -->
+    <div class="form-step">
+      <h2>Academic & Teaching</h2>
+      <label>Quality of Teaching:</label>
+      <div class="stars">
+        <input type="radio" id="qt5" name="qualityOfTeaching" value="5" required><label for="qt5">★</label>
+        <input type="radio" id="qt4" name="qualityOfTeaching" value="4"><label for="qt4">★</label>
+        <input type="radio" id="qt3" name="qualityOfTeaching" value="3"><label for="qt3">★</label>
+        <input type="radio" id="qt2" name="qualityOfTeaching" value="2"><label for="qt2">★</label>
+        <input type="radio" id="qt1" name="qualityOfTeaching" value="1"><label for="qt1">★</label>
+      </div>
+
+      <label>Faculty Availability:</label>
+      <div class="stars">
+        <input type="radio" id="fa5" name="facultyAvailability" value="5" required><label for="fa5">★</label>
+        <input type="radio" id="fa4" name="facultyAvailability" value="4"><label for="fa4">★</label>
+        <input type="radio" id="fa3" name="facultyAvailability" value="3"><label for="fa3">★</label>
+        <input type="radio" id="fa2" name="facultyAvailability" value="2"><label for="fa2">★</label>
+        <input type="radio" id="fa1" name="facultyAvailability" value="1"><label for="fa1">★</label>
+      </div>
+
+      <button type="button" class="btn-prev">Previous</button>
+      <button type="button" class="btn-next">Next</button>
+    </div>
+
+    <!-- Step 3: Campus Facilities -->
+    <div class="form-step">
+      <h2>Campus Facilities</h2>
+      <label>Library Resources:</label>
+      <div class="stars">
+        <input type="radio" id="lib5" name="library" value="5" required><label for="lib5">★</label>
+        <input type="radio" id="lib4" name="library" value="4"><label for="lib4">★</label>
+        <input type="radio" id="lib3" name="library" value="3"><label for="lib3">★</label>
+        <input type="radio" id="lib2" name="library" value="2"><label for="lib2">★</label>
+        <input type="radio" id="lib1" name="library" value="1"><label for="lib1">★</label>
+      </div>
+
+      <label>Wi-Fi Access:</label>
+      <div class="stars">
+        <input type="radio" id="wifi5" name="wifi" value="5" required><label for="wifi5">★</label>
+        <input type="radio" id="wifi4" name="wifi" value="4"><label for="wifi4">★</label>
+        <input type="radio" id="wifi3" name="wifi" value="3"><label for="wifi3">★</label>
+        <input type="radio" id="wifi2" name="wifi" value="2"><label for="wifi2">★</label>
+        <input type="radio" id="wifi1" name="wifi" value="1"><label for="wifi1">★</label>
+      </div>
+
+      <button type="button" class="btn-prev">Previous</button>
+      <button type="button" class="btn-next">Next</button>
+    </div>
+
+    <!-- Step 4: Feedback -->
+    <div class="form-step">
+      <h2>Feedback & Suggestions</h2>
+      <label>Overall Satisfaction:</label>
+      <div class="stars">
+        <input type="radio" id="os5" name="overallRating" value="5" required><label for="os5">★</label>
+        <input type="radio" id="os4" name="overallRating" value="4"><label for="os4">★</label>
+        <input type="radio" id="os3" name="overallRating" value="3"><label for="os3">★</label>
+        <input type="radio" id="os2" name="overallRating" value="2"><label for="os2">★</label>
+        <input type="radio" id="os1" name="overallRating" value="1"><label for="os1">★</label>
+      </div>
+
+      <label>Additional Suggestions:</label>
+      <textarea name="suggestions" placeholder="Your suggestions..." required></textarea>
+
+      <button type="button" class="btn-prev">Previous</button>
+      <button type="submit">Submit</button>
+    </div>
+
+    <!-- Success Step -->
+    <div class="form-step">
+      <h2>Thank You!</h2>
+      <p>Your survey has been successfully submitted.</p>
+    </div>
+
+  </form>
+</div>
+
+<!-- Link JS at the end of body -->
+<script src="script.js"></script>
+</body>
+</html>
